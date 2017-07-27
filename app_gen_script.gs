@@ -34,7 +34,7 @@ function generateForAllRecords(settings){
     } else {
       var len = data.length
       }
-  for (i=1; i<len; i++){
+  for (i=0; i<len; i++){
     var doc_name = data[i].gs_level_applied_to + " - " + data[i].full_name + " Application"
     if (!DriveApp.getFolderById(settings.TARGET_FOLDER).getFilesByName(doc_name).hasNext()){
       generateForSingleRecord(data[i], doc_name, settings)
